@@ -6,6 +6,6 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 100 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true 
-  has_secure_password
+  has_secure_password  # ハッシュ化
   validates :password, presence: true, length: { minimum: 6 }
 end
